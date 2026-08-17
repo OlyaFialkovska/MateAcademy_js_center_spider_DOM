@@ -5,11 +5,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const wall = document.querySelector('.wall');
 
+  const wallStyles = getComputedStyle(wall);
+
   const spider = document.querySelector('.spider');
 
-  const topWall = wall.offsetHeight / 2 - spider.offsetHeight / 2;
+  const wallWidth = wall.offsetWidth
+    - parseInt(wallStyles.borderLeftWidth)
+    - parseInt(wallStyles.borderRightWidth);
 
-  const leftWall = wall.offsetWidth / 2 - spider.offsetWidth / 2;
+  const wallHeight = wall.offsetHeight
+    - parseInt(wallStyles.borderTopWidth)
+    - parseInt(wallStyles.borderBottomWidth);
+
+  const topWall = wallHeight / 2 - spider.offsetHeight / 2;
+
+  const leftWall = wallWidth / 2 - spider.offsetWidth / 2;
 
   wall.style.position = 'relative';
 
