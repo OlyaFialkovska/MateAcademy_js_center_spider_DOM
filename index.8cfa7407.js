@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",function(){var t=document.querySelector(".wall"),e=getComputedStyle(t),o=document.querySelector(".spider"),r=t.offsetWidth-parseInt(e.borderLeftWidth)-parseInt(e.borderRightWidth),d=(t.offsetHeight-parseInt(e.borderTopWidth)-parseInt(e.borderBottomWidth))/2-o.offsetHeight/2,i=r/2-o.offsetWidth/2;t.style.position="relative",o.style.position="absolute",o.style.top="".concat(d,"px"),o.style.left="".concat(i,"px")});
+//# sourceMappingURL=index.8cfa7407.js.map
